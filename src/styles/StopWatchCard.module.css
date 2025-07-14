@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #111a2c;
+    border-radius: 1rem;
+    width: 84%;
+    margin-left: 8%;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    gap: 1.5rem;
+}
+
+.timerDisplay {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(#0e1628, #111a2c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    border: 8px solid #ff717f;
+    flex-shrink: 0;
+}
+
+.timeInputs {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.timeUnit {
+    text-align: center;
+    font-size: 1.25rem;
+    position: relative;
+}
+
+.timeUnit img {
+    cursor: pointer;
+    width: 16px;
+    margin: 2px 0;
+}
+
+.timeUnit span {
+    display: inline-block;
+    min-width: 28px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 3rem;
+    line-height: 106%;
+    letter-spacing: 4%;
+    color: #d2e1ff;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 106%;
+    letter-spacing: 4%;
+    padding-left: 1.5rem;
+    color: #a8b3cf;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.startButton {
+    margin-top: 1rem;
+    padding: 1rem 12rem;
+    background-color: #ff717f;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.startButton:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+/* --- Responsive Styles --- */
+
+
+@media (max-width: 480px) {
+    .timerDisplay {
+        width: 120px;
+        height: 120px;
+        font-size: 1rem;
+    }
+
+    .timeUnit span {
+        font-size: 2rem;
+    }
+
+    .labels {
+        font-size: 1rem;
+        gap: 1rem;
+    }
+
+    .startButton {
+        font-size: 1rem;
+        padding: 1rem 8rem ;
+    }
+}

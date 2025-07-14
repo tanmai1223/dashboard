@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Single Day', cursive;
+  font-weight: 400;
+  font-size: 2.5rem; /* ~40px for better scaling */
+  line-height: 1.4;
+  margin-left: 2.5rem;
+  margin-top: 0.6rem;
+  color: #72DB73;
+}
+
+.headingsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* ✅ vertically align image and text */
+  background-color: black;
+  padding: 0.5rem 1rem; /* ✅ consistent spacing on all sides */
+}
+
+.headingsHeader img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* ✅ MOBILE STYLING */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;         /* Shrinks nicely on phones */
+    margin-left: 1rem;
+  }
+
+  .headingsHeader {
+    flex-direction: row;   /* Stack vertically */
+    align-items: flex-start;  /* Align text to the left */
+    padding: 1rem;
+  }
+
+  .headingsHeader img {
+    margin: 0.5rem 0 0 0;     /* Add spacing above, remove right margin */
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

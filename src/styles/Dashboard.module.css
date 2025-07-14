@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 2rem; /* ~32px, scales better */
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    margin: 0.5rem 1rem 1rem 4rem;
+    color: #FFFFFF;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1.9rem; /* ~30px */
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    margin-left: 5.5rem;
+    color: #878787;
+}
+
+.dashboardMain {
+    background-color: black;
+    padding: 1rem;
+}
+
+/* ✅ MOBILE-FRIENDLY STYLING */
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.5rem; /* smaller on small screens */
+        margin-left: 1.5rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-left: 1.5rem;
+        text-align: center;
+    }
+
+    .dashboardMain {
+        padding: 1rem 0.5rem;
+    }
+}

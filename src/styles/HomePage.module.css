@@ -1,0 +1,267 @@
+/* === Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+
+/* === Root Variables === */
+:root {
+  --primary-green: #148A08;
+  --highlight-green: #72DB73;
+  --text-white: #ffffff;
+  --text-dark: #085C00;
+}
+
+/* === Reset & Base === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: black;
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: auto;
+}
+
+/* === Layout Containers === */
+/* === Layout Containers === */
+.homeMainContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.sideContainer {
+  display: flex;
+  flex-direction: row;
+  /* Side-by-side layout */
+  gap: 2rem;
+  height: auto;
+  flex-wrap: nowrap;
+  /* Prevent stacking unless screen is small */
+}
+
+.contextContainer {
+  flex: 0 0 30%;
+  padding-top: 5%;
+}
+
+.optionContainer {
+  flex: 0 0 70%;
+  padding-top: 1%;
+}
+
+/* === Headings === */
+.super {
+  font-family: 'Single Day', cursive;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6vw, 4.4rem);
+  color: var(--highlight-green);
+  margin-bottom: 1rem;
+}
+
+.matter {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  color: var(--text-white);
+  margin-bottom: 2rem;
+  padding-right: 10%;
+}
+
+/* === Option Area === */
+.slot {
+  display: grid;
+  width: 80%;
+  height: 90%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+  margin-top: 2%;
+  margin-left: 8%;
+}
+
+
+
+.option {
+  border-radius: 1rem;
+  padding: 1%;
+  cursor: pointer;
+  height: 10rem;
+  width: 10.6rem;
+  flex-shrink: 0;
+  transition: transform 0.2s, border 0.2s;
+}
+
+.option:hover {
+  transform: scale(1.05);
+}
+
+.option p {
+  font-weight: 500;
+  font-size: 1.75rem;
+  color: white;
+  margin: 0.5rem 0 0 1rem;
+}
+
+.selected {
+  border: 6px solid var(--primary-green);
+}
+
+/* === Image inside option === */
+.images {
+  width: 7rem;
+  height: 5rem;
+  margin: 10% auto 0;
+  border-radius: 0.8rem;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+
+/* === Selections Tags === */
+.selections {
+  height: auto;
+  width: 28rem;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.selections p {
+  background-color: var(--primary-green);
+  color: #fff;
+  border-radius: 2rem;
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0.5rem;
+}
+
+.selections span {
+  margin-left: 8%;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+/* === Next Button === */
+.buttonNext {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonNext button {
+  width: 11rem;
+  height: 3rem;
+  border-radius: 2.2rem;
+  margin-top: 2rem;
+  background-color: var(--primary-green);
+  color: white;
+  font-weight: 500;
+  font-size: 1.7rem;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+.buttonNext button:hover {
+  border: 2px solid white;
+}
+
+.buttonNext button:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+.disabledBtn {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* === Warning Text === */
+.warning {
+  color: red;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.warning img {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+  margin: 0 0.6% 0 0.2%;
+}
+
+@media (max-width: 768px) {
+  .homeMainContainer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .sideContainer {
+    flex-direction: column;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .contextContainer,
+  .optionContainer {
+    flex: 0 0 100%;
+    padding-top: 0;
+  }
+
+  .slot {
+    width: 100%;
+    margin-left: 0;
+    padding: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+
+  .option {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Maintain square layout */
+  }
+
+  .images {
+    width: 70%;
+    height: auto;
+  }
+
+  .option p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0.5rem auto 0;
+  }
+
+  .selections {
+    width: 100%;
+  }
+
+  .buttonNext {
+    justify-content: center;
+  }
+
+  .buttonNext button {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+}

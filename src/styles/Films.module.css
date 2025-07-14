@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.filmsRow {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap:0.5rem;
+  padding-right: 4%;
+  padding-left: 8%;
+}
+
+.filmsCard {
+  width: 15rem;
+  height: 18rem;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.filmsCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.filmsCard img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/* ✅ MOBILE STYLING */
+@media (max-width: 768px) {
+  .filmsRow {
+    padding: 1rem;          /* Less padding */
+    gap: 1rem;
+  }
+
+  .filmsCard {
+    width: 100%;            /* Full width on mobile */
+    max-width: 300px;
+    height: auto;
+  }
+
+  .filmsCard img {
+    object-fit: cover;      /* Better for portrait crops on small screens */
+    height: auto;
+  }
+}
