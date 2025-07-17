@@ -69,7 +69,7 @@ Built as part of my Full Stack Development journey at **Cuvette**.
 
 
 ## 📁 Folder Structure
-
+```bash
 dashboard-app/
 ├── public/
 ├── src/
@@ -79,7 +79,7 @@ dashboard-app/
 │ ├── index.js
 ├── package.json
 ├── README.md
-
+```
 ---
 
 ## 🧠 What I Learned
