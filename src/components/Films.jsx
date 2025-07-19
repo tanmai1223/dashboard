@@ -6,12 +6,13 @@ function Films({ genre }) {
 
   const fetchFilms = async () => {
     try {
-      const res = await fetch(`https://www.omdbapi.com/?apikey=7823bb6f&s=${genre}&type=movie`);
+      const apiKey = import.meta.env.VITE_OMDB_API_KEY;
+      const res = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${genre}&type=movie`);
       const data = await res.json();
       if (data.Search) {
-        setMovies(data.Search.slice(0, 5)); // limit to 4 movies
+        setMovies(data.Search.slice(0, 5));
       } else {
-        setMovies([]); // handle case when no movies found
+        setMovies([]);
       }
     } catch (error) {
       console.error("Failed to fetch movies:", error);
@@ -19,8 +20,8 @@ function Films({ genre }) {
   };
 
   useEffect(() => {
-    fetchFilms();
-  }, [genre]);
+    fetchFilms(); // ✅ FIXED typo
+  });
 
   return (
     <div className={style.filmsRow}>
